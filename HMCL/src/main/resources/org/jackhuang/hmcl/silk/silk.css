@@ -1,0 +1,367 @@
+/* ============================================================
+   Silk UI 主题 —— 深色 · 丝滑
+   设计语言：深蓝黑底 + 柔和高斯层次 + 蓝紫强调渐变
+   ============================================================ */
+
+/* ---------- 基础 ---------- */
+.root {
+    -fx-background-color: #0b0d14;
+    -fx-font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    -fx-text-fill: #f2f4fa;
+}
+
+/* ---------- 侧边栏 ---------- */
+.sidebar {
+    -fx-background-color: #12141f;
+    -fx-padding: 28 16 22 16;
+    -fx-border-color: transparent #1e2130 transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+.logo {
+    -fx-font-size: 28px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 0 12 8 12;
+}
+
+.nav {
+    -fx-spacing: 6;
+    -fx-padding: 18 0 0 0;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #9aa0b4;
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 16;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #1a1d2c;
+    -fx-text-fill: #d4d8e6;
+}
+
+.nav-button:selected {
+    -fx-background-color: #262b40;
+    -fx-text-fill: #ffffff;
+}
+
+.footer {
+    -fx-text-fill: #585d72;
+    -fx-font-size: 12px;
+    -fx-padding: 0 12;
+}
+
+/* ---------- 内容区 ---------- */
+.content {
+    -fx-background-color: #0b0d14;
+    -fx-padding: 48 64;
+    -fx-alignment: TOP_LEFT;
+}
+
+.page {
+    -fx-alignment: TOP_LEFT;
+}
+
+.page-header {
+    -fx-padding: 0 0 8 0;
+}
+
+.page-title {
+    -fx-font-size: 34px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #ffffff;
+}
+
+.page-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #8a90a6;
+}
+
+/* ---------- 卡片 ---------- */
+.card-grid {
+    -fx-padding: 4 0 0 0;
+}
+
+.card {
+    -fx-background-color: #161927;
+    -fx-background-radius: 14;
+    -fx-border-color: #23283a;
+    -fx-border-radius: 14;
+    -fx-border-width: 1;
+    -fx-padding: 20 22;
+}
+
+.card-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #f2f4fa;
+}
+
+.card-desc {
+    -fx-font-size: 13px;
+    -fx-text-fill: #8a90a6;
+}
+
+/* 英雄卡片：主页快捷启动 */
+.hero-card {
+    -fx-background-color: linear-gradient(to right, #1a1f3a, #161927);
+    -fx-border-color: #2c3352;
+}
+
+.hero-version {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #c8cede;
+}
+
+/* 统计卡片 */
+.stat-card {
+    -fx-alignment: TOP_LEFT;
+    -fx-min-width: 140;
+}
+
+.stat-title {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6b7188;
+}
+
+.stat-value {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #ffffff;
+}
+
+/* ---------- 按钮 ---------- */
+.btn {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 10 20;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.btn-primary {
+    -fx-background-color: linear-gradient(to right, #4f7cff, #7c5cff);
+    -fx-text-fill: #ffffff;
+}
+
+.btn-primary:hover {
+    -fx-opacity: 0.9;
+}
+
+.btn-ghost {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a6adc4;
+    -fx-border-color: #2c3352;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+}
+
+.btn-ghost:hover {
+    -fx-background-color: #1a1d2c;
+    -fx-text-fill: #ffffff;
+}
+
+/* 版本分类筛选 */
+.filter-row {
+    -fx-padding: 0 0 4 0;
+}
+
+.filter-button {
+    -fx-background-color: #12141f;
+    -fx-text-fill: #9aa0b4;
+    -fx-font-size: 13px;
+    -fx-padding: 7 14;
+    -fx-background-radius: 999;
+    -fx-border-color: #23283a;
+    -fx-border-radius: 999;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.filter-button:hover {
+    -fx-text-fill: #d4d8e6;
+    -fx-border-color: #2c3352;
+}
+
+.filter-button:selected {
+    -fx-background-color: linear-gradient(to right, #4f7cff, #7c5cff);
+    -fx-text-fill: #ffffff;
+    -fx-border-color: transparent;
+}
+
+/* ---------- 徽标 ---------- */
+.badge {
+    -fx-background-color: #262b40;
+    -fx-text-fill: #9aa0b4;
+    -fx-font-size: 12px;
+    -fx-padding: 4 10;
+    -fx-background-radius: 999;
+}
+
+/* ---------- 空状态 ---------- */
+.empty-state {
+    -fx-background-color: #12141f;
+    -fx-background-radius: 14;
+    -fx-border-color: #1e2130;
+    -fx-border-radius: 14;
+    -fx-border-width: 1;
+}
+
+.empty-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #c8cede;
+}
+
+.empty-desc {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6b7188;
+}
+
+/* ---------- 输入框 ---------- */
+.input {
+    -fx-background-color: #12141f;
+    -fx-text-fill: #f2f4fa;
+    -fx-prompt-text-fill: #6b7188;
+    -fx-background-radius: 10;
+    -fx-border-color: #23283a;
+    -fx-border-radius: 10;
+    -fx-padding: 10 14;
+    -fx-highlight-fill: #4f7cff;
+}
+
+.input:focused {
+    -fx-border-color: #4f7cff;
+}
+
+/* ---------- 列表 ---------- */
+.list-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-color: #23283a;
+    -fx-border-radius: 10;
+    -fx-padding: 4;
+}
+
+.list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d4d8e6;
+    -fx-font-size: 14px;
+    -fx-padding: 10 14;
+    -fx-background-radius: 8;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #1a1d2c;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #262b40;
+    -fx-text-fill: #ffffff;
+}
+
+.list-view .list-cell:empty {
+    -fx-background-color: transparent;
+}
+
+.status-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #8a90a6;
+}
+
+/* ---------- 日志区 ---------- */
+.log-area {
+    -fx-background-color: #0b0d14;
+    -fx-text-fill: #c8cede;
+    -fx-font-family: "Menlo", "SF Mono", monospace;
+    -fx-font-size: 12px;
+    -fx-background-radius: 10;
+    -fx-border-color: #23283a;
+    -fx-border-radius: 10;
+    -fx-padding: 10 12;
+    -fx-control-inner-background: #0b0d14;
+}
+
+.log-area .content {
+    -fx-background-color: #0b0d14;
+}
+
+/* ---------- 模组下载 ---------- */
+.mod-version-row {
+    -fx-background-color: #12141f;
+    -fx-background-radius: 10;
+    -fx-border-color: #1e2130;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-padding: 10 12;
+}
+
+.mod-scroll {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-color: #1e2130;
+    -fx-border-radius: 10;
+    -fx-padding: 2;
+}
+
+.mod-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ---------- 安装窗口 ---------- */
+.installer-check {
+    -fx-text-fill: #d4d8e6;
+    -fx-font-size: 14px;
+}
+
+.installer-check .box {
+    -fx-background-color: #12141f;
+    -fx-border-color: #2c3352;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-border-width: 1;
+}
+
+.installer-check:selected .box {
+    -fx-background-color: #4f7cff;
+    -fx-border-color: #4f7cff;
+}
+
+.installer-check:selected .mark {
+    -fx-background-color: #ffffff;
+}
+
+/* ---------- 下拉框 ---------- */
+.combo-box {
+    -fx-background-color: #12141f;
+    -fx-border-color: #23283a;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #d4d8e6;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #161927;
+    -fx-border-color: #23283a;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.combo-box-popup .list-cell {
+    -fx-text-fill: #d4d8e6;
+    -fx-background-color: #161927;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #1a1d2c;
+}
