@@ -16,8 +16,10 @@ import org.jackhuang.hmcl.setting.DownloadProviders;
 import org.jackhuang.hmcl.setting.GameSettings;
 import org.jackhuang.hmcl.task.Task;
 import org.jackhuang.hmcl.task.TaskExecutor;
+import org.jackhuang.hmcl.util.StringUtils;
 import org.jackhuang.hmcl.util.versioning.GameVersionNumber;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 /**
@@ -59,6 +61,8 @@ public final class SilkLauncher {
                 Platform.runLater(() -> onLog.accept("已选择 Java " + java.getVersion()
                         + " · 分配内存 " + maxMemory + " MB"));
 
+                List<String> jvmArgs = StringUtils.tokenize(currentJvmArgs(versionId));
+
                 LaunchOptions options = new LaunchOptions.Builder()
                         .setGameDir(repository.getBaseDirectory())
                         .setJava(java)
@@ -66,6 +70,7 @@ public final class SilkLauncher {
                         .setWidth(854)
                         .setHeight(480)
                         .setVersionName(versionId)
+                        .setOverrideJavaArguments(jvmArgs)
                         .create();
 
                 ProcessListener listener = new ProcessListener() {
@@ -97,6 +102,15 @@ public final class SilkLauncher {
             return GameSettings.SUGGESTED_MEMORY;
         int memory = context.getMemory();
         return memory > 0 ? memory : GameSettings.SUGGESTED_MEMORY;
+    }
+
+    /** 读取指定版本自定义的 JVM 启动参数（原始字符串，未配置时为空）。 */
+    private static String currentJvmArgs(String versionId) {
+        SilkContext context = SilkContext.get();
+        if (context == null)
+            return "";
+        String args = context.getJvmArgs(versionId);
+        return args == null ? "" : args;
     }
 
     /**

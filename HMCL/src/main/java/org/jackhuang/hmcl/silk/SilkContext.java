@@ -39,7 +39,7 @@ public final class SilkContext {
     private SilkContext() {
         gameDir = loadGameDir();
         memory = loadMemory();
-        repository = new DefaultGameRepository(gameDir);
+        repository = new SilkGameRepository(gameDir);
     }
 
     /**
@@ -95,6 +95,26 @@ public final class SilkContext {
         saveMemory(this.memory);
     }
 
+    /** 读取指定版本的 JVM 启动参数；未设置时返回空字符串。 */
+    public String getJvmArgs(String versionId) {
+        return readProps().getProperty(jvmArgsKey(versionId), "");
+    }
+
+    /** 设置指定版本的 JVM 启动参数并持久化；空字符串表示清除。 */
+    public synchronized void setJvmArgs(String versionId, String args) {
+        String key = jvmArgsKey(versionId);
+        writeProps(props -> {
+            if (args == null || args.isBlank())
+                props.remove(key);
+            else
+                props.setProperty(key, args.trim());
+        });
+    }
+
+    private static String jvmArgsKey(String versionId) {
+        return "jvm-args." + versionId;
+    }
+
     /**
      * 切换到新的游戏目录：确保目录存在、重建仓库并持久化。
      */
@@ -106,7 +126,7 @@ public final class SilkContext {
         }
 
         this.gameDir = normalized;
-        this.repository = new DefaultGameRepository(normalized);
+        this.repository = new SilkGameRepository(normalized);
         saveGameDir(normalized);
     }
 

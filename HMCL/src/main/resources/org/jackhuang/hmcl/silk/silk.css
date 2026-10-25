@@ -365,3 +365,58 @@
 .combo-box-popup .list-cell:hover {
     -fx-background-color: #1a1d2c;
 }
+
+/* ---------- 菜单 ---------- */
+.context-menu {
+    -fx-background-color: #161927;
+    -fx-border-color: #23283a;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 6;
+}
+
+.menu-item {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+    -fx-padding: 8 14;
+}
+
+.menu-item .label {
+    -fx-text-fill: #d4d8e6;
+    -fx-font-size: 13px;
+}
+
+.menu-item:hover,
+.menu-item:focused {
+    -fx-background-color: #262b40;
+}
+
+/* ---------- 下拉箭头 ---------- */
+.combo-box .arrow {
+    -fx-background-color: #8a90a6;
+}
+
+/* ---------- 更多菜单（版本列表） ---------- */
+.more-menu {
+    -fx-background-color: #161927;
+    -fx-border-color: #23283a;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 6;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.45), 18, 0.2, 0, 4);
+}
+
+.more-menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d4d8e6;
+    -fx-font-size: 13px;
+    -fx-padding: 9 14;
+    -fx-background-radius: 6;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+}
+
+.more-menu-item:hover {
+    -fx-background-color: #262b40;
+    -fx-text-fill: #ffffff;
+}
