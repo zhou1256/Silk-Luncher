@@ -15,7 +15,7 @@
 
 ## 下载
 
-前往 [Releases](https://github.com/zhouyuncheng15/Silk-Luncher/releases) 下载最新的 `Silk-macos-aarch64.zip`（Apple Silicon / arm64）。
+前往 [Releases](https://github.com/zhou1256/Silk-Luncher/releases) 下载最新的 `Silk-macos-aarch64.zip`（Apple Silicon / arm64）。
 
 解压后把 `Silk.app` 拖到「应用程序」。首次打开若提示无法验证，请在 Finder 中右键 → 打开。
 
