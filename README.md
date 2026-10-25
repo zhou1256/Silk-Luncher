@@ -9,7 +9,7 @@
 - **版本管理**：添加、删除、启动游戏版本，一键切换游戏目录
 - **下载中心**：下载各版本 Minecraft，安装 Forge / Fabric / NeoForge / OptiFine / Fabric API
 - **模组下载**：搜索并下载模组（Modrinth 源）
-- **账户系统**：支持离线登录与微软账号登录
+- **账户系统**：支持离线登录
 - **Java 管理**：自动检测本机 Java，没有时从国内镜像（BMCLAPI）自动下载
 - **全新界面**：丝滑的深色 JavaFX UI
 
