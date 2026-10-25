@@ -74,3 +74,6 @@ language-subtag-registry
 !/.gemini/config.yaml
 .codex
 /.gradle-*/
+
+# 上游 CI（本仓库不用，保留在本地即可）
+/.github/workflows/
